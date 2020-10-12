@@ -26,19 +26,22 @@ This code creates images like this:
 
 ### Labeling Pitfalls: How corruptions affect performance (Figure 7)
 
+To simulate inattentive labeling we corrupted the original dataset from [Mathis et al.](https://www.nature.com/articles/s41593-018-0209-y), available on [Zenodo](https://zenodo.org/record/4008504#.X4S7RZqxVH4).  We corrupted 1, 5, 10 and 20% of the dataset (N=1,066 images) either by swapping two labels or removing one, and trained with varying percentages of the data.  Then we trained models and evaluated them on the test set (the rest of the data). The figures below show percentage of correct keypoints (PCK) on the test set for various conditions. The results from these experiments can be plotted like this:
 ```
 python CorruptionFigure.py
 ```
-Creates figures like this:
+
+Which creates figures like this (when training with 10% of the data as shown in the paper)
 
 <p align="center">
 <img src="ResultsCorruption/LabelingCorruptionimpact_10Percent.png?format=1000w" width="55%">
 </p>
 
+Also results for different training fractions (not shown in the paper are plotted).
 
+### Data Augmentation Improves Performance (Figure 8)
 
 More code to come, stay tuned!
-
 
 
 Do you ant to contribute labeled data to the DeepLabCut project? Check out http://contrib.deeplabcut.org

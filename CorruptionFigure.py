@@ -41,7 +41,9 @@ for frac in sorted(test_error['Training size'].unique()):
             x = np.concatenate([sorted_errors, sorted_errors[[-1]]])
             y = np.linspace(0, 1 - frac_invalid, len(x))
             axes.flat[n].step(x, y, label=mag, color=colors[i], lw=2, where='mid')
-            axes.flat[n].set_title(bpt)
+            if corrupt!='swap':
+                axes.flat[n].set_title(bpt)
+
             if corrupt == 'default':
                 axes.flat[n + 4].step(x, y, label=mag, color=colors[i], lw=2)
     for n, ax in enumerate(axes.flat):
@@ -49,7 +51,7 @@ for frac in sorted(test_error['Training size'].unique()):
 
         # ax.set_box_aspect(1)
         # For matplotlib < 3.3.0, uncomment the line below:
-        # ax.set_aspect(20, adjustable='datalim')
+        #ax.set_aspect(20, adjustable='datalim')
         ax.set_xlim(0, 20)
         ax.set_ylim(0, 1)
         ax.spines['left'].set_position(('outward', 10))
@@ -66,10 +68,11 @@ for frac in sorted(test_error['Training size'].unique()):
             ax.set_yticklabels([])
     patches = [plt.plot([0, 0], [0, 0], color=color, label=f'{label}%', lw=2)[0]
                for color, label in zip(colors, mags)]
+
     fig.legend(handles=patches, loc='center', frameon=False,
                bbox_to_anchor=(0, 0.45, 1, 0.1),
                ncol=5, borderaxespad=0.)
 
     plt.savefig('ResultsCorruption/LabelingCorruptionimpact_'+str(frac)+'Percent.png')
 
-plt.show()
+#plt.show()
