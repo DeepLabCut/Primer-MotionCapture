@@ -72,7 +72,4 @@ for frac in sorted(test_error['Training size'].unique()):
     fig.legend(handles=patches, loc='center', frameon=False,
                bbox_to_anchor=(0, 0.45, 1, 0.1),
                ncol=5, borderaxespad=0.)
-
     plt.savefig('ResultsCorruption/LabelingCorruptionimpact_'+str(frac)+'Percent.png')
-
-#plt.show()

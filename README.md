@@ -2,7 +2,7 @@
 
 By [Alexander Mathis](https://github.com/AlexEMG) | [Steffen Schneider](https://github.com/stes) | [Jessy Lauer](https://github.com/jeylau) | [Mackenzie Mathis](https://github.com/MMathisLab)
 
-Here we provide code that is used in the worked-examples we provide in our Primer on Deep Learning for Motion Capture.
+Here we provide code that we used in the worked-examples we provide in our Primer on Deep Learning for Motion Capture.
 
 Publication: TBA
 Preprint: https://arxiv.org/abs/2009.00564
@@ -41,7 +41,29 @@ Also results for different training fractions (not shown in the paper are plotte
 
 ### Data Augmentation Improves Performance (Figure 8)
 
-More code to come, stay tuned!
+Here we used the standad example dataset from the main repo: https://github.com/DeepLabCut/DeepLabCut/tree/master/examples/openfield-Pranav-2018-10-30
+and trained with 3 different augmentation methods. To plot the results run the following:
 
+```
+python Primer_AugmentationComparison-Figures.py
+```
+Creates figure (in folder: ResultsComparison)
+8A = ResultsComparison/LearningCurves.png
+8B = ResultsComparison/ErrorCurves.png
+8C, D = Stickfigures.png, Stickfiguresfirst500.png
+incl. the 8D in the folder "ResultsComparisonFrames"
 
-Do you ant to contribute labeled data to the DeepLabCut project? Check out http://contrib.deeplabcut.org
+We then evaluated this model (only trained on a single mouse and session, which is not recommended) on all other mice and sessions (data from here [Zenodo](https://zenodo.org/record/4008504#.X4S7RZqxVH4)). We noticed that with good augmentation (imgaug, tensorpack) the model generalizes to data from the same camera but not the higher-resolution camera (Fig 8E). We then furthermore illustrate active learning, by adding a few frames from an experiment with the higher-resolution camera (Fig 8F). We found that this is sufficient to generalize reasonably.
+
+```
+python Primer_RobustnessEvaluation-Figures.py
+```
+
+Creates figure (in folder: ResultsComparison)
+8E = ResultsComparison/PCKresults.png
+8F = ResultsComparison/PCKresultsafterAugmentation.png
+
+**More code to come, stay tuned!**
+
+Do you want to contribute labeled data to the DeepLabCut project?
+Check out http://contrib.deeplabcut.org
