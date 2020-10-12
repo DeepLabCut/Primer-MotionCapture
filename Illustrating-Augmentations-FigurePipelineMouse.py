@@ -6,11 +6,9 @@ for a few labeled images of a mouse (Data in folder mouse_m7s3
 from Mathis, A., et al. DeepLabCut: markerless pose estimation of user-defined body parts with deep learning.
 Nat Neurosci 21, 1281–1289 (2018). https://doi.org/10.1038/s41593-018-0209-y)
 
-For "A Primer on Motion Capture with DeepLearning:
-Principles, Pitfalls and Perspectives"
+For "A Primer on Motion Capture with Deep Learning: Principles, Pitfalls and Perspectives"
+by Alexander Mathis, Steffen Schneider, Jessy Lauer, and Mackenzie Weygandt Mathis
 
-by Alexander Mathis, Steffen Schneider,
-Jessy Lauer, and Mackenzie Weygandt Mathis
 
 Uses Imgaug:
 Code: https://github.com/aleju/imgaug

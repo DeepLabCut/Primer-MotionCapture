@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-This script uses Imgaug to display various augmentation methods
-for a few labeled images of a mouse (Data recorded with Alex' iphone
-at Aiguille du Midi near Mont Blanc)
+This script uses Imgaug to display various augmentation methods for a few labeled images of a mouse
+(Data recorded with Alex' iphone at Aiguille du Midi near Mont Blanc)
 
-For "A Primer on Motion Capture with DeepLearning:
-Principles, Pitfalls and Perspectives"
-
-by Alexander Mathis, Steffen Schneider,
-Jessy Lauer, and Mackenzie Weygandt Mathis
+For "A Primer on Motion Capture with Deep Learning: Principles, Pitfalls and Perspectives"
+by Alexander Mathis, Steffen Schneider, Jessy Lauer, and Mackenzie Weygandt Mathis
 
 Uses Imgaug:
 Code: https://github.com/aleju/imgaug
