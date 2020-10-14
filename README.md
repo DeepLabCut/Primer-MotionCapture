@@ -4,7 +4,8 @@ By [Alexander Mathis](https://github.com/AlexEMG) | [Steffen Schneider](https://
 
 Here we provide code that we used in the worked-examples we provide in our Primer on Deep Learning for Motion Capture.
 
-Publication: TBA
+Publication in Neuron: https://www.cell.com/neuron/fulltext/S0896-6273(20)30717-0
+
 Preprint: https://arxiv.org/abs/2009.00564
 
 ### Illustrating augmention methods (Figure 3)
@@ -48,9 +49,13 @@ and trained with 3 different augmentation methods. To plot the results run the f
 python Primer_AugmentationComparison-Figures.py
 ```
 Creates figure (in folder: ResultsComparison)
+
 8A = ResultsComparison/LearningCurves.png
+
 8B = ResultsComparison/ErrorCurves.png
+
 8C, D = Stickfigures.png, Stickfiguresfirst500.png
+
 incl. the 8D in the folder "ResultsComparisonFrames"
 
 We then evaluated this model (only trained on a single mouse and session, which is not recommended) on all other mice and sessions (data from here [Zenodo](https://zenodo.org/record/4008504#.X4S7RZqxVH4)). We noticed that with good augmentation (imgaug, tensorpack) the model generalizes to data from the same camera but not the higher-resolution camera (Fig 8E). We then furthermore illustrate active learning, by adding a few frames from an experiment with the higher-resolution camera (Fig 8F). We found that this is sufficient to generalize reasonably.
@@ -60,7 +65,9 @@ python Primer_RobustnessEvaluation-Figures.py
 ```
 
 Creates figure (in folder: ResultsComparison)
+
 8E = ResultsComparison/PCKresults.png
+
 8F = ResultsComparison/PCKresultsafterAugmentation.png
 
 **More code to come, stay tuned!**
