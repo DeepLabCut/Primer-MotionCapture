@@ -70,7 +70,7 @@ Creates figure (in folder: ResultsComparison)
 
 8F = ResultsComparison/PCKresultsafterAugmentation.png
 
-**More code to come, stay tuned!**
+**Outlook**
 
 Do you want to contribute labeled data to the DeepLabCut project?
 Check out http://contrib.deeplabcut.org
